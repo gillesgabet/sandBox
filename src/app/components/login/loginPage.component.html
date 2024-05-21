@@ -1,0 +1,20 @@
+<div>
+    <h1>Login</h1>
+    <form (formdata)="loginForm">
+
+      <div class="group ">
+        <label for="email">Email</label>
+        <input matInput fromControl="ctrEmail" formControlName="email" type="email" required>
+        <label for="password">Password</label>
+        <input matInput formControl="ctrPassword" formControlName="password" type="password" required>
+      </div>
+      <button 
+        mat-icon-button  
+        color       = "primary" 
+        matTooltip  = "test bulle"
+        (click)="login()">Submit</button>
+      <span>Forgot Password? <a routerLink="/forgot-password">Click here</a></span>
+      <span>Stay connected? <input type="checkbox" formControlName="stayConnected"></span>
+
+    </form>
+  </div>

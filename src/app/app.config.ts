@@ -1,9 +1,11 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ROUTES, Routes, provideRouter } from '@angular/router';
 
-import { routes } from './app.routes';
+import { appRoutes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration()]
+  //providers: [provideRouter(ROUTES), provideClientHydration(), provideAnimationsAsync('noop')]
+  providers: [provideRouter(appRoutes), provideClientHydration(), provideAnimationsAsync('noop')]
 };
